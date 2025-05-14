@@ -19,7 +19,6 @@ func NewProductController(service service.ProductService) *ProductController {
 	}
 }
 
-// RegisterRoutes - Route'ları kaydeder
 func (c *ProductController) RegisterRoutes(e *echo.Echo) {
 	products := e.Group("/api/products")
 	products.GET("", c.GetAllProducts)
